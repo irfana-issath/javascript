@@ -1,4 +1,4 @@
-import { useAuth } from '../context/AuthContext';
+import { useAuth } from "../Context/AuthContext";
 
 const StatusCard = () => {
   const { isLoggedIn, login, logout } = useAuth();
@@ -11,7 +11,7 @@ const StatusCard = () => {
       </p>
       <div className="status-actions">
         <button 
-          className="login-btn" 
+          className="login-btn btn-info" 
           onClick={login}
           disabled={isLoggedIn}
         >

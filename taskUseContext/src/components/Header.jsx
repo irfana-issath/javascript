@@ -1,14 +1,14 @@
-import { useAuth } from '../context/AuthContext';
+import { useAuth } from "../Context/AuthContext";
 
 const Header = () => {
   const { isLoggedIn, toggleLogin } = useAuth();
 
   return (
     <div className="header">
-      <h1>Login Status Dashboard</h1>
+      <h1>Login Status</h1>
       <div className="user-status">
         {isLoggedIn ? (
-          <h2>Welcome User!</h2>
+          <h2>Welcome !</h2>
         ) : (
           <h2>Please Login</h2>
         )}

@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import AuthContext from './context/AutaahContext'
+import AuthContext from './Context/AuthContext'
 import Header from './components/Header'
 import UserProfile from './components/UserProfile'
 import './App.css'

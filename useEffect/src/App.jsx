@@ -7,7 +7,9 @@ function App() {
 
   return (
     <>
-      
+      <h1>{useEffect}</h1>
+      <h1>{useState}</h1>
+      <h1>{sample}</h1>
     </>
   )
 }
