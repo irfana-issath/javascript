@@ -68,10 +68,14 @@ console.log(isEven(6));
 // --------------------5-----------------------------------------
 
 function findLargest(arr){
+
+    let maxNum = 0 ;  // 50
+
     for(i=0;i<arr.length;i++){
-       let result= arr[i]>arr[i]? arr[i] : arr[i]
-      return result
+        if(arr[i] > maxNum){
+            maxNum = arr[i];
+        }
     }
-    
+      return maxNum
 }
-console.log(findLargest([20,30,40,50]));
+console.log(findLargest([20,40,50,30]));
