@@ -1,3 +1,5 @@
+const read = require("readline-sync");
+// -----------------------02-09-25--------------------------------
 // function with argument with return value
 
 function sum(num1,num2) {
@@ -35,47 +37,125 @@ function fun(){
 
 fun()
 
-// task
-//  --------------------1-------------------------------------
-function greet(name) {
-    return `Hello ${name}`
-}
-console.log(greet("izza"))
 
 
-// ---------------------2-------------------------------------------
-function sum(a,b){
-    return a+b
-}
-console.log(sum(10,5));
+// ---------------------09-09-25--------------------------------
 
-// ---------------------3-----------------------------------------
-function max(a,b){
-    let res= a>b? a : b;
-    return res
-}
-console.log(max(10,50));
+//-------------------anonymous function---------------
+// (function(){
+// console.log("it's anonymous function");
+// })()
 
-// ---------------------4----------------------------------
 
-function isEven(num){
-     return num%2==0
+
+// -------------------arrow function-----------------
+
+const arrowFun=()=>console.log("it's arrow function");
+arrowFun()
+
+
+// ------------------callback function-------------
+
+const newSum=(num1,num2,callback)=>{
+    res=num1+num2
+    callback(res)
+
 }
 
-console.log(isEven(6));
+const sample=(result)=>{
+console.log(`resilt is ${result}`);
+}
+newSum(10,3,sample)
 
 
-// --------------------5-----------------------------------------
+// ------------------higher order function----------------
 
-function findLargest(arr){
-
-    let maxNum = 0 ;  // 50
-
-    for(i=0;i<arr.length;i++){
-        if(arr[i] > maxNum){
-            maxNum = arr[i];
-        }
+function sampleFn(){
+    return function(){
+        console.log("return another fn");
     }
-      return maxNum
 }
-console.log(findLargest([20,40,50,30]));
+
+sampleFn()()
+
+
+// ----------------if-------------------
+// const age=25;
+// if(age<30){
+//       console.log("you are yung");
+// }
+
+// const isTrue= true
+// if(isTrue===true){
+//     console.log("hey izza");
+    
+// }
+
+// ------------------- if else--------------------
+
+const newAge=45;
+if(newAge<30){
+      console.log("if exicuted");
+}else{
+    console.log("else exicuted");
+}
+
+// -----------------------if else lader---------------
+
+const mark=70;
+if(mark<=40){
+    console.log("failed");
+}else if(mark<=50){
+     console.log("C");
+     
+} else if(mark<=60){
+     console.log("C+");
+     
+}else if(mark<=70){
+     console.log("B");
+     
+}else if(mark<=80){
+     console.log("B+");
+     
+}else if(mark<=90){
+     console.log("A");
+     
+}else if(mark<=100){
+     console.log("A+");
+     
+}else{
+    console.log("invalid");
+    
+}
+
+// ----------------------------switch---------------
+
+const color="red";
+switch (color) {
+    case "white":
+        console.log("its a jasmin");
+        break;
+    case "yellow":
+        console.log("its a sun flower");
+        break;    
+    case "red":
+        console.log("its a rose");
+        break;
+    case "green":
+        console.log("its a leef");
+        break;    
+    default:
+        console.log("invalid input");
+        
+}
+
+// ----------------ternary operator------------------
+
+const newMark=40
+newMark<40 ? console.log("failed") : newMark<50 ? console.log("C") : newMark<60 ? console.log("C+"): newMark<70 ? console.log("B") : newMark<80 ? console.log("B+") : newMark<90 ? console.log("A") : newMark<=100 ? console.log("A+") : console.log("invalid input");
+
+const age = read.questionInt("please enter your age");
+read.question();
+read.questionFloat()
+console.log("age------>", age);
+
