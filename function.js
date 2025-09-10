@@ -1,4 +1,4 @@
-const read = require("readline-sync");
+// const read = require("readline-sync");
 // -----------------------02-09-25--------------------------------
 // function with argument with return value
 
@@ -42,11 +42,20 @@ fun()
 // ---------------------09-09-25--------------------------------
 
 //-------------------anonymous function---------------
-// (function(){
-// console.log("it's anonymous function");
-// })()
+
+(function(){
+console.log("it's anonymous function");
+})()
+
+// -------------------immediately invoked function-------------------
 
 
+// -------------------function expretion-------------------------
+let func= (function(){
+    console.log("it's anonymous function");
+}
+)
+func()
 
 // -------------------arrow function-----------------
 
@@ -154,8 +163,8 @@ switch (color) {
 const newMark=40
 newMark<40 ? console.log("failed") : newMark<50 ? console.log("C") : newMark<60 ? console.log("C+"): newMark<70 ? console.log("B") : newMark<80 ? console.log("B+") : newMark<90 ? console.log("A") : newMark<=100 ? console.log("A+") : console.log("invalid input");
 
-const age = read.questionInt("please enter your age");
-read.question();
-read.questionFloat()
-console.log("age------>", age);
+// const age = read.questionInt("please enter your age");
+// read.question();
+// read.questionFloat()
+// console.log("age------>", age);
 
