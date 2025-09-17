@@ -43,9 +43,9 @@ fun()
 
 //-------------------anonymous function---------------
 
-(function(){
-console.log("it's anonymous function");
-})()
+// (function(){
+// console.log("it's anonymous function");
+// })()
 
 // -------------------immediately invoked function-------------------
 
@@ -167,4 +167,111 @@ newMark<40 ? console.log("failed") : newMark<50 ? console.log("C") : newMark<60 
 // read.question();
 // read.questionFloat()
 // console.log("age------>", age);
+
+
+// ---------------------13.09.2025---------------------------------
+
+// ------------------for loop----------------------
+
+console.log("Before loop---------->");
+
+for( i = 1 ; i <= 5 ; i++){
+    console.log(`looping numbers: ${i}`);
+    
+}
+
+console.log("loop finihed----------->");
+
+
+// -------------------Nested loop--------------------------
+
+console.log("Nested loop started------------>");
+
+
+for( i = 1 ; i < 5 ; i++){
+   for( j = 1 ; j <= 5 ; j++){
+     console.log(`looping row: ${i} looping column: ${j}`);
+   }
+    console.log("Exit from j loop-------->");
+    
+}
+
+console.log("Nested loop finished------------>");
+
+
+// -------------------output in one row--------------------
+
+console.log("output in one line started--------->");
+
+for(i = 1; i < 2; i++){
+     let str = ``;
+    for(j = 1; j <= 5; j++){
+        str += j + ` `;
+    }
+    console.log(str);
+}
+
+console.log("output in one line started--------->");
+
+
+
+
+// ----------------------16.09.2025-------------------------------
+
+// *
+// * *
+// * * *
+// * * * *
+// * * * * *
+for(let i = 1; i <= 5; i++){
+    let str="";
+    for(let j = 1; j <= i ; j++){
+        str+= "*" + " " ;
+    }
+    console.log(str);
+}
+
+// --------------------------------------------------------------
+
+//         *  5 - 1 = 4
+//       * *  5 - 2 = 3
+//     * * *  5 - 3 = 2
+//   * * * *
+// * * * * *
+console.log("------------------>");
+
+for(let i = 1 ; i <= 5 ; i++){
+    let str = "";
+    for( let j = 1 ; j <= 5 ; j++){
+        if(j > 5 - i ){
+            str += "*" + " ";
+        }else{
+            console.log(" ");
+        }
+    }
+    console.log(str);
+    
+}
+
+// --------------------------------------------------------
+    //         *  
+    //       * * * 
+    //     * * * * *
+    //   * * * * * * *
+    // * * * * * * * * *
+
+
+
+
+//---------------------------array---------------------------------- 
+
+console.log("----arr----arr----arr----arr---->");
+
+
+let arr=[10,20,30,40];
+console.log(arr);
+
+let ar = ["izza", "zaad", "izzaad"];
+
+
 
