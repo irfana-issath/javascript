@@ -176,9 +176,218 @@ console.log(findLargest([20,40,50,30]));
     const z = 1000;
     console.log(z);
 
-    // ---------
+    // ------------array methodes-----------------------------
+    // --------------------1----------------------------------
 
-     
+    let array2 = [10,11,12,13,14,15];
+
+
+    let doubleNumbers = array2.map((ele) => ele + ele)
+    console.log("Double Numbers------->" + doubleNumbers);
+
+    // ---------------------2----------------------------------------
+
+    let filterEvenNumbers = array2.filter((arrNum) => arrNum % 2 == 0)
+    
+    console.log("Even Nums------->" + filterEvenNumbers);
+    
+    // ---------------------3---------------------------------------------
+
+    let sumArray = array2.reduce((acc,arrNum)=>acc += arrNum,0);
+
+    console.log("Sum of array------->" + sumArray);
+    
+    // ---------------------4------------------------------------------------
+
+    let oddNums = array2.filter((arrNum) => arrNum % 2 == !0)
+    let findFirstOdd = oddNums.at(0)
+
+    console.log(findFirstOdd);
+
+    // -----------------------array object----------------------------------------------------- 
+    let users = [
+        {
+            fullname : "tom",
+            age : 16,
+            isActive : true ,
+            course : {
+                name : "MERN" ,
+                duration : " 6 months" ,
+            }
+        },
+        {
+            fullname : "Jerry",
+            age : 25,
+            isActive : false ,
+            course : {
+                name : "Python" ,
+                duration : " 4 months" ,
+            }
+        },
+        {
+            fullname : "John",
+            age : 22,
+            isActive : true ,
+            course : {
+                name : "MERN" ,
+                duration : " 6 months" ,
+            }
+        },
+        {
+            fullname : "Ravi",
+            age : 23,
+            isActive : true ,
+            course : {
+                name : "Python" ,
+                duration : " 4 months" ,
+            }
+        }
+
+    ];
+
+    // ----------------------1-------------------------------------------------------------------
+
+    let activeUsers = users.filter((ele)=>ele.isActive==true)
+     console.log(activeUsers);
+
+    //  ---------------------2---------------------------------------------------------------------
+
+    let ageGreater = users.filter((ele)=>ele.age > 20 )
+    console.log(ageGreater);
+    
+    // ----------------------3----------------------------------------------------------------------
+
+    let mern = activeUsers.filter((ele) => ele.course.name == "MERN")
+     console.log(mern);
+
+    //  ---------------------4-----------------------------------------------------------------------
+
+     let python = users.filter((ele) => ele.course.name == "Python");
+     let nameAndDuration = python.map((ele)=>({
+        fullname : ele.fullname,
+        duration : ele.course.duration
+     }))
+     console.log(nameAndDuration);
+
+    //  ------------------array of objects-----------------------------------------------------
+
+    let accounts = [
+        {
+            acno: 1000, ac_type: "savings", balance: 5000,
+        transactions: [
+            { to: 1001, amount: 500, note: "ebill", method: "g-pay" },
+            { to: 1002, amount: 600, note: "geto", method: "neft" }, 
+            { to: 1003, amount: 100, note: "erchrge", method:"phone-pay" }
+            ]
+        },
+        {
+            acno: 1001, ac_type: "savings", balance: 6000,
+        transactions: [
+            { to: 1000, amount: 1000, note: "emi", method: "phone-pay" },
+            { to: 1002, amount: 500, note: "geto", method: "neft" }, 
+            { to: 1003, amount: 100, note: "erchrge", method:"phone-pay" }
+            ]
+        },
+        {
+            acno: 1002, ac_type: "current", balance: 8000,
+        transactions: [
+            { to: 1000, amount: 1000, note: "emi", method: " phone-pay" },
+            { to: 1001, amount: 5000, note: "geto", method: "neft" }, 
+            { to: 1003, amount: 100, note: "erchrge", method:"phone-pay" }
+            ]
+        },
+        {
+            acno: 1003, ac_type: "current", balance: 16000,
+        transactions: [
+            { to: 1000, amount: 1000, note: "emi", method: " phone-pay" },
+            { to: 1002, amount: 500, note: "geto", method: "neft" }, 
+            { to: 1001, amount: 100, note: "erchrge", method:"phone-pay"}
+            ]
+        },
+    ];
+
+    // ------------------------1----------------------------------------------------------
+
+    console.log("Total Accounts: "+ accounts.length);
+    // ------------------------2------------------------------------------------------------
+
+    let sevingsAcc = accounts.filter((ele) => ele.ac_type == "savings");
+    console.log(sevingsAcc);
+    // ------------------------3----------------------------------------------------------------
+
+    let the1000Acc = accounts.filter((ele) => ele.acno == 1000)
+
+    let theBalance = the1000Acc.map((ele) => ele.balance);
+    console.log(theBalance);
+
+    // -------------------------4---------not completede-------------------------------------------------------
+
+    let tran = accounts.filter((ele) => ele.transactions);
+    let gPayTrans = tran.filter((ele) => ele.method == "g-pay")
+    console.log(tran);
+    // --------------------------5---------------------------------------------------------------------
+
+    // let the1002Acc = accounts.filter((ele) => ele.acno == 1002);
+    let trans = accounts.map((ele) => ele.transactions)
+    let transTo1002 = trans.filter((ele) => ele.to == 1002)
+
+    console.log(transTo1002);
+
+    // --------------------------6---------------------------------------------------------------------
+
+    let maxim = accounts.reduce((acc,ele) => acc.balance < ele.balance ? ele : acc )
+    console.log(maxim);
+
+    // ---------------------------------------------------------------------------------------------------------------
+
+    var mobiles=[
+        [1000,"samsung", "samsungf41", 15000, "snapdragon", "AMOLED", "4g"],
+        [1001,"samsung", "samsungA51", 32000, "snapdragon", "AMOLED", "5g"],
+        [1002, "redmi","not 10 pro", 19000,"snapdragon", "LED", "4g"],
+        [1003, "redmi","mi 11 lite",30000,"mediatek", "LED", "4g"],
+        [1004, "apple", "12pro", 72000, "snapdragon", "AMOLED", "4g"],
+        [1005, "apple", "12 pro max", 100000, "snapdragon", "AMOLED", "5g"],
+        [1006, "one plus","nord2", 29000,"snapdragon", "AMOLED", "4g"],
+        [1007,"one plus", "nord 2", 15000,"mediatek", "LED", "4g"]
+        ]
+    
+        // -------------------------1-----------------------------------------------------------------------------------
+        let phnNames = mobiles.map((ele) => ele[1]);
+        console.log(phnNames);
+        // ------------------------2-----------------------------------------------------------------------------------------
+
+        let mobilePrices = mobiles.map((ele) => ele[3])
+        console.log(mobilePrices);
+        // -----------------------3-------------------------------------------------------------------------------------------
+
+        let onlySam = mobiles.filter((ele) => ele[1] == "samsung");
+        console.log(onlySam);
+        // -----------------------4----------------------------------------------------------------------------------------------
+        
+        let phnBlw = mobilePrices.reduce((acc,ele) => acc < ele ? ele : acc)
+        console.log(phnBlw);
+        // -----------------------5----------------------------------------------------------------------------------------------
+
+        let priceRange = mobiles.filter((ele) => ele[3] >= 25000 && ele[3] <= 30000)
+        console.log(priceRange);
+        // -----------------------6-----------------------------------------------------------------------------------------------
+
+        let fiveG = mobiles.filter((ele) => ele[6] == "5g").map((ele) => ele[1])
+        console.log(fiveG);
+        //------------------------7------------------------------------------------------------------------------------------------
+
+         let fiveGrm = mobiles.filter((ele) => ele[6] == "5g" && ele[3] < 35000)
+        console.log(fiveGrm);
+        // -------------------------8----------------------------------------------------------------------------------------------
+        let samSung = mobiles.filter((ele) => ele[1] == "samsung" && ele[6] == "4g" && ele[5] == "AMOLED")
+        console.log(samSung);
+        
+        
+        
+        
+
+
+
     
         
 
