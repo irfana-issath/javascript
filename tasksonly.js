@@ -381,10 +381,128 @@ console.log(findLargest([20,40,50,30]));
         // -------------------------8----------------------------------------------------------------------------------------------
         let samSung = mobiles.filter((ele) => ele[1] == "samsung" && ele[6] == "4g" && ele[5] == "AMOLED")
         console.log(samSung);
+
+
+        // ------------------------25-09-25-----------------------------------------
+        console.log("------------> 25-09-25 <-----------");
         
+        // 1. You have a cart, each item has price, quantity, and maybe a discount.
+        //    You need the total bill.
+
+           const cart = [
+             { name: "Laptop", price: 50000, quantity: 1, discount: 0.1 },
+             { name: "Phone", price: 20000, quantity: 2, discount: 0 },   
+             { name: "Headphones", price: 2000, quantity: 3, discount: 0.05 }
+           ];
+
+        let totalBill = cart.reduce((total,item)=>{
+            let discount = item.discount ?? 0 ;
+            return total + item.price * (1 - discount) * item.quantity;
+        },0)
+
+        console.log("Total: "+totalBill);
         
+
+        // 2. Students have multiple subjects. You need to calculate average marks, and decide pass/fail.
+
+          const students = [
+            { name: "Arun", marks: [80, 75, 90] },
+            { name: "Meera", marks: [30, 40, 35] },
+            { name: "Kiran", marks: [60, 55, 70] }
+          ];
+
+        //   function averageMark(marks){
+        //     let totalM =0;
+        //     //  for(let i = 0 ; i < marks.length ; i++){
+        //     //     totalM += marks[i];
+        //     // }
+        //     return totalM / marks.length;
+        //   }
+        //   console.log(averageMark());
+          
+
+         
+        //   let averageMark = students.reduce((std)=>{
+        //     for(let i = 0 ; i < marks.length ; i++){
+        //         totalM = (marks[i] + marks[i])/marks.length;
+        //     }
+        //     return totalM
         
+        //   },0)
+
+
+
+        // 3. A company wants:
+        //    Average salary
+        //    Highest paid employee
+        //    Employees earning more than 50k.
+
+          const employees = [
+            { name: "John", salary: 60000 },
+            { name: "Anna", salary: 45000 },
+            { name: "Ravi", salary: 75000 },
+            { name: "Sara", salary: 50000 }
+          ];
+
+          
+
+
+
+        // 4. You have reviews for movies, need to calculate average rating per movie, and sort them by rating.
+
+        //   const reviews = [
+        //     { movie: "Inception", rating: 5 },
+        //     { movie: "Inception", rating: 4 },
+        //     { movie: "Interstellar", rating: 5 },
+        //     { movie: "Interstellar", rating: 4 },
+        //     { movie: "Dunkirk", rating: 3 }
+        //   ];
+
+
+        // 5. Each employee has attendance & feedback scores. You need to:
+
+        //   Check if all employees have 75%+ attendance.
+        //   Find employees with average feedback < 3 (need training).
+
+        //   const employees = [
+        //     { name: "Raj", attendance: 80, feedback: [4, 5, 3] },
+        //     { name: "Anu", attendance: 70, feedback: [2, 3, 2] },
+        //     { name: "Sam", attendance: 90, feedback: [5, 4, 4] }
+        //   ];
+
+
+        // 6. From transactions, detect:
+
+        //    Total spent
+        //    Transactions > 10,000
+        //    Suspicious: Same user making more than 3 transactions > 5000
+
+        //    const transactions = [
+        //      { user: "A", amount: 12000 },
+        //      { user: "B", amount: 3000 },
+        //      { user: "A", amount: 6000 },
+        //      { user: "A", amount: 7000 },
+        //      { user: "A", amount: 8000 },
+        //      { user: "C", amount: 2000 }
+        //    ];
+
         
+
+        
+        function sample(){
+           
+            
+        }
+
+        sample()
+        
+
+         let x = 1;
+            let yi = 20;
+
+            if(x < y){
+                console.log("------>",x);
+            }
 
 
 

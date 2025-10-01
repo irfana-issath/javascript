@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+
+//---------------------------array---------------------------------- 
+
+let arr=[10,20,30,40];
+console.log(arr);
+console.log(typeof arr);
+arr[4]=50
+console.log(arr);
+
+
+let ar = ["izza", "zaad", "izzaad"];
+console.log(ar);
+console.log(ar[1]);
+console.log(typeof ar);
+ar[ar.length] = "raf"; //for insert new element in end
+console.log(ar);
+
+// ---------------------------18.09.25---------------------------------
+
+                       //array methods
+// .length - find the array length
+let arra=[2,4,6,8];
+console.log("size of array: ",arra.length);
+
+// .push    - for insert element at last and returns length of the array
+let addLast = arra.push(60)
+console.log("array--------> ",arra);
+console.log("result--------> ",addLast);
+
+
+// .pop    - for delete last element of an array and returns deleted element
+let removeLast = arra.pop();
+console.log("array--------> ",arra);
+console.log("result--------> ",removeLast);
+
+// .unshift    - for insert first elements of an array and returns length of the array
+let addFirst = arra.unshift(56,9)
+console.log("array--------> ",arra);
+console.log("result--------> ",addFirst);
+
+// /.shift    - for delete first element of an array and retutns deleted element
+let removeFirst = arra.shift()
+console.log("array--------> ",arra);
+console.log("result--------> ",removeFirst);
+
+
+// .forEach    - for print the same array. its doesnot returns anything(output---->undefined)
+let printArr = arra.forEach((num)=>console.log(num));
+console.log("array--------> ",arra);
+console.log("result--------> ",printArr);
+
+// .map   - for modified new array
+let addOn = arra.map((num)=>num+num);
+console.log("array--------> ",arra);
+console.log("result--------> ",addOn);
+
+
+
+// // .find
+
+// const resul = arra.find((num) => num > 20)
+// console.log(resul);
+
+
+// // -----------------------filter method-------------------------------
+
+// let filt = arra.filter((element) => element > 20)
+// console.log(filt);
+
+
+// // -----------------------findIntex--------------------------------------
+
+// let finInt = arra.findIndex((element) => element > 20)
+// console.log(finInt);
+
+// // -----------------------indexOf------------------------------------------------
+
+// let finIndof = arra.indexOf(20)
+// console.log(finIndof);
+
+// // ------------------------reduce------------------------------------------------
+
+// let red = arra.reduce((acc, element) => acc + element )
+// console.log(red);
+
+// // ------------------------every-----------------------------------------------
+
+// let  eve= arra.every((element) => element > 0)
+// console.log(eve);
+
+// // some  - 
+
+// let sm = arra.some((element) => element > 60)
+// console.log(sm);
+
+
+// // slice  - can slice a big array as small
+
+// let array1=[100,200,300,400]
+// let sls = array1.slice(2)
+// console.log(sls);
+
+
+// // splice  - can add or remove any elements ve want 
+// let array = ["i","r","f","a"];
+// let spl = array.splice(0,3,"i","z","z")
+// console.log("array---------> ",array);
+// console.log("result--------> ",spl);
+
+
+// // ----------------------not completed----------------
+// // --------------------------------------------------------------------------
+
+    </script>
+</body>
+</html>

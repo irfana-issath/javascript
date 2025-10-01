@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+
+// // ---------------------13.09.2025---------------------------------
+
+// // ------------------for loop----------------------
+
+// console.log("Before loop---------->");
+
+// for( i = 1 ; i <= 5 ; i++){
+//     console.log(`looping numbers: ${i}`);
+    
+// }
+
+// console.log("loop finihed----------->");
+
+
+// // -------------------Nested loop--------------------------
+
+// console.log("Nested loop started------------>");
+
+
+// for( i = 1 ; i < 5 ; i++){
+//    for( j = 1 ; j <= 5 ; j++){
+//      console.log(`looping row: ${i} looping column: ${j}`);
+//    }
+//     console.log("Exit from j loop-------->");
+    
+// }
+
+// console.log("Nested loop finished------------>");
+
+
+// // -------------------output in one row in loop--------------------
+
+// console.log("output in one line started--------->");
+
+// for(i = 1; i < 2; i++){
+//      let str = ``;
+//     for(j = 1; j <= 5; j++){
+//         str += j + ` `;
+//     }
+//     console.log(str);
+// }
+
+// console.log("output in one line started--------->");
+
+
+
+
+// ----------------------16.09.2025-------------------------------
+
+// 1 2 3 4 5
+// 1 2 3 4 5
+// 1 2 3 4 5
+// 1 2 3 4 5
+
+for(let i = 1; i < 5; i++){ //i = 1 
+    let str = "";
+    for(let j = 1; j <= 5; j++){ //j = 
+        str += j + " ";
+        
+    }
+    console.log("------------>"+str);
+
+}
+
+
+// ------------------------------------------------------------------------
+
+
+// *
+// * *
+// * * *
+// * * * *
+// * * * * *
+// for(let i = 1; i <= 5; i++){
+//     let str="";
+//     for(let j = 1; j <= i ; j++){
+//         str+= "*" + " " ;
+//     }
+//     console.log(str);
+// }
+// console.log("------------------>");
+
+// --------------------------------------------------------------
+
+//         *  5 - 1 = 4
+//       * *  5 - 2 = 3
+//     * * *  5 - 3 = 2
+//   * * * *
+// * * * * *
+
+// for(let i = 1 ; i <= 5 ; i++){
+//     let str = "";
+//     for( let j = 1 ; j <= 5 ; j++){
+//         if(j > (5 - i) ){
+//             str += "*" + " ";
+//         }else{
+//             str += " " + " ";
+//         }
+//     }
+//     console.log(str);
+    
+// }
+// console.log("------------------>");
+
+// // --------------------------------------------------------
+
+//     //         *  
+//     //       * * * 
+//     //     * * * * *
+//     //   * * * * * * *
+//     // * * * * * * * * *
+
+// for(let i = 1; i <= 5; i++){
+//     let str = "";
+//     for(let j = 1; j <= 5; j++){
+//         if(j > (5-i)){
+//             str += "* " + " ";
+//         }else{
+//             str += " " + " " ;
+//         }
+//     }
+//      console.log(str);
+     
+// }
+
+// -----------------------------while loop------------------------------------------------
+
+console.log("while loop--------------->");
+let i = 1;
+while (i < 10) {
+    console.log(i);
+    i++;
+}
+
+
+//-----------------------------do-while loop-----------------------------------------
+
+console.log("Do-while loop--------------->");
+let j = 1
+do{
+    console.log(j);
+    j++;
+}while(j <= 5 );
+
+// -------------------------------------------------------------------------
+
+    </script>
+</body>
+</html>
