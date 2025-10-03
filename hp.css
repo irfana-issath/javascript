@@ -1,0 +1,41 @@
+
+
+ .left-writes{
+    width: 478px;
+    height: 590px;
+ }
+
+ .right-items{
+    width: 864px;
+ }
+
+ .brdr{
+    border-top: solid 1px;
+    border-bottom: solid 1px;
+ }
+
+ .line{
+    border-bottom: solid 1px;
+ }
+
+ .border-box{
+   border: solid 2px;
+ }
+
+ .brdr-bottom{
+   border-bottom: solid 1px;
+   
+ }
+
+ .zoom-in-out:hover {
+   transform: scale(1.1);
+   cursor: pointer;
+ }
+
+ .cursor{
+   cursor: pointer;
+ }
+
+ .blue-clr{
+   background-color: #10103afd;
+ }
