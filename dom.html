@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <button onclick="justClick()">click me</button>
+
+    <h1 id="heading1"></h1>
+
+    <button onclick="someThing()">click</button>
+
+    <p id="something"></p>
+
+    <button onclick="forDiv()">div btn</button>
+    
+    <div id="justDiv"></div>
+
+    <script>
+
+        function justClick(){
+           const element = document.getElementById("heading1")
+
+            console.log(element);
+            
+        }
+
+        function someThing(){
+            const p = document.getElementById("something")
+            p.textContent = "clicked P "
+            console.log(p);
+            
+        }
+
+        function forDiv(){
+            const div = document.getElementById("justDiv")
+            div.textContent = "div clicked"
+            console.log(div);
+            
+        }
+
+
+
+
+
+
+    </script>
+</body>
+</html>

@@ -25,16 +25,23 @@
                         </div>
                         </div>`
         })
+        console.log("htmldata------->",htmlData);
+        
     }
 
      const getProducts = () => {
             fetch("https://fakestoreapi.com/products")
             .then((res)=> res.json())
-            .then((data) => console.log(data))
+            .then((data) =>displayProducts(data))
             .catch((err) => console.log(err))
         }
 
         getProducts();
+
+        
+
+        // ------------4.10.25--------------------------------
+
 </script>
 
 </body>
