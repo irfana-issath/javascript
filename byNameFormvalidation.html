@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./bootstrap.min.css">
+
+</head>
+<body>
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <form class="row g-3">
+                    <div class="col-md-12">
+                        <label for="name" class="form-label">Full Name</label>
+                        <input type="text" class="form-control" name="fullName" onchange="handleChange(event)">
+                    </div>
+                    <div class="col-md-12">
+                        <label for="inputEmail4" class="form-label">Email</label>
+                        <input type="email" class="form-control" name="email" onchange="handleChange(event)">
+                    </div>
+                    <div class="col-md-12">
+                        <label for="inputPassword4" class="form-label">Password</label>
+                        <input type="password" class="form-control" name="password" onchange="handleChange(event)">
+                    </div>
+                    
+                    <div class="col-12">
+                        <button type="submit" class="btn btn-primary" onclick="signInBtn()">Sign in</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+<script src="./bootstrap.bundle.min.js"></script>
+<script>
+
+    let elements = {
+        fullName : "",
+        email : "",
+        password : ""
+    };
+
+    function handleChange(ev){
+        //  const element = document.getElementsByName("fullName")
+        //  console.log(element[0].value);
+        //  console.log(ev.target.value);
+         elements[ev.target.name] = ev.target.value 
+         console.log(elements);
+    }
+
+    
+    
+
+
+   
+    
+    function signInBtn(){
+        console.log("Success"); 
+    }
+    
+</script>
+</body>
+</html>

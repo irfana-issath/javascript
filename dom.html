@@ -7,7 +7,7 @@
 </head>
 <body>
     
-    <button onclick="justClick()">click me</button>
+    <!-- <button onclick="justClick()">click me</button>
 
     <h1 id="heading1"></h1>
 
@@ -17,29 +17,55 @@
 
     <button onclick="forDiv()">div btn</button>
     
-    <div id="justDiv"></div>
+    <div id="justDiv"></div> -->
+
+
+
+    
+    <!-- 7.10.25------dom-- -->
+
+    <div id="sampleDiv" style="display: none;">
+        sample div
+    </div>
+
+    <button onclick="handleDisply()"> display</button>
+
+    <button onclick="handleHide()">hide</button>
 
     <script>
 
-        function justClick(){
-           const element = document.getElementById("heading1")
+        // function justClick(){
+        //    const element = document.getElementById("heading1")
 
-            console.log(element);
+        //     console.log(element);
             
+        // }
+
+        // function someThing(){
+        //     const p = document.getElementById("something")
+        //     p.textContent = "clicked P "
+        //     console.log(p);
+            
+        // }
+
+        // function forDiv(){
+        //     const div = document.getElementById("justDiv")
+        //     div.textContent = "div clicked"
+        //     console.log(div);
+            
+        // }
+
+
+        // 7.10.25-----------dom--------------
+
+        function handleDisply(){
+            const element= document.getElementById("sampleDiv");
+            element.style.display  ="block";
         }
 
-        function someThing(){
-            const p = document.getElementById("something")
-            p.textContent = "clicked P "
-            console.log(p);
-            
-        }
-
-        function forDiv(){
-            const div = document.getElementById("justDiv")
-            div.textContent = "div clicked"
-            console.log(div);
-            
+        function handleHide(){
+            const element= document.getElementById("sampleDiv");
+            element.style.display = "none"
         }
 
 

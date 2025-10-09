@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  </head>
+  <body>
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <form class="row g-3">
+                  <div class="col-md-6">
+                    <label for="inputEmail4" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="userEmail" onkeyup ="handleChange()">
+                  </div>
+                  <div class="col-md-6">
+                    <label for="inputPassword4" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="userPassword" onkeyup="handlePassword()">
+                  </div>
+                  <div class="col-12">
+                    <label for="inputAddress" class="form-label">Address</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="inputCity" class="form-label">City</label>
+                    <input type="text" class="form-control" id="inputCity" onchange="handleCity()">
+                  </div>
+                  <div class="col-md-4">
+                    <label for="inputState" class="form-label">State</label>
+                    <select id="inputState" class="form-select" onchange="handleState()">
+                      <option selected>Choose...</option>
+                      <option value="orissa">orissa</option>
+                      <option value="kerala">kerala</option>
+                      <option value="karnataka">karnataka</option>
+                    </select>
+                  </div>
+                  <div class="col-md-2">
+                    <label for="inputZip" class="form-label">Zip</label>
+                    <input type="text" class="form-control" id="inputZip" onchange="handleZip()">
+                  </div>
+                  <div class="col-12">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" id="gridCheck" onchange="hamdleClick()">
+                      <label class="form-check-label" for="gridCheck" >
+                        Check me out
+                      </label>
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <button id="signBtn" type="submit" class="btn btn-primary" onclick="signinbtn()">Sign in</button>
+                  </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <script>
+        let userEmail = '';
+
+    function handleChange(){
+        const element= document.getElementById("userEmail");
+        userEmail = element.value;
+        console.log(userEmail);
+        
+    } 
+
+    let userPassword = ``;
+
+    function handlePassword(){
+        const element =document.getElementById("userPassword");
+        userPassword = element.value;
+        console.log(userPassword);
+        
+    }
+
+    let userAddress1 = `` ;
+    function handleAddress1(){
+        const element = document.getElementById("inputAddress");
+        userAddress1 = element.value;
+        console.log(userAddress1);
+
+    }
+
+    let usercity = `` ;
+    function handleCity(){
+        const element = document.getElementById("inputCity");
+        usercity = element.value;
+        console.log(usercity);
+        
+    }
+
+    let userState = `` ;
+    function handleState(){
+        const element = document.getElementById("inputState");
+        userState = element.value;
+        console.log(userState);
+        
+    }
+
+    let userZip = `` ;
+    function handleZip(){
+        const element = document.getElementById("inputZip");
+        userZip = element.value;
+        console.log(userZip);
+        
+    }
+
+    let userClick = false ;
+    function hamdleClick(){
+      userClick = document.getElementById("gridCheck").checked
+      console.log(userClick);
+      
+    }
+
+    function signinbtn(){
+        console.log("success");
+        
+    }
+
+    
+
+
+
+
+
+
+    </script>
+  </body>
+</html>
+
+
+
+
+

@@ -89,9 +89,6 @@ sampleFn()()
 
 
 
-
-
-
 // closure
 
 function prntFunc(){
